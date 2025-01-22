@@ -15,12 +15,15 @@ pub struct CliArguments {
     #[arg(short = 'r', long = "regex", value_name = "REGEX", help = "正则表达式")]
     pub re: Option<Regex>,
 
-    #[arg(short = 'l', long, default_value_t = 10, help = "最小有效长度")]
+    #[arg(short = 'l', long, value_name = "LENGTH", default_value_t = 10, help = "最小有效长度")]
     pub min_length: usize,
 
     #[arg(
-        short = 'e', long, value_name = "ENCODING", value_parser = decoder_from_str, default_value = "utf-8",
-        help = "文本编码"
+        short = 'e', long = "encoding",
+        value_name = "ENCODING",
+        value_parser = decoder_from_str,
+        default_value = "utf-8",
+        help = "编码方法"
     )]
     pub decoder: &'static encoding_rs::Encoding,
 
