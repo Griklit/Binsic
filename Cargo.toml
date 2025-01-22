@@ -1,0 +1,13 @@
+[package]
+name = "Binsic"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "binsic"
+path = "src/main.rs"
+
+[dependencies]
+regex = { version = "1.11.1" }
+clap = { version = "4.5.27", features = ["derive"] }
+encoding_rs = { version = "0.8.35" }
