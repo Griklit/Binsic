@@ -1,6 +1,6 @@
 # Binsic
 
-二进制文件文本探查器，用于寻找二进制文件中可能包含的文本内容。
+二进制文件文本探查器，用于从二进制文件中寻找可能为字符串的内容。
 
 ```bash
 Usage: binsic.exe [OPTIONS] <PATH>
@@ -16,3 +16,5 @@ Options:
   -h, --help                 Print help
   -V, --version              Print version
 ```
+
+例: `binsic -r [\u4E00-\u9FFF]+ -l 10 -e utf-8 -o output.txt target.bin`
